@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ardennes Week — Mabompré Family Trip Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fir:#1C3529;
+    --moss:#2E5240;
+    --paper:#F5F7F2;
+    --card:#FFFFFF;
+    --amber:#D9A03F;
+    --amber-soft:#F3E3C2;
+    --brick:#B24A2F;
+    --ink:#1E2B24;
+    --mut:#5C6B60;
+    --line:#DDE5DC;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:'Karla',sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  h1,h2,h3{font-family:'Fraunces',serif}
+  a{color:var(--moss)}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:var(--fir);overflow-x:auto;white-space:nowrap;
+      -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav .inner{display:flex;gap:.25rem;padding:.55rem .9rem;max-width:1080px;margin:0 auto}
+  nav a{color:#DCE8DF;text-decoration:none;font-size:.72rem;font-weight:700;letter-spacing:.12em;
+        text-transform:uppercase;padding:.35rem .6rem;border-radius:99px}
+  nav a:hover,nav a:focus-visible{background:var(--moss);color:#fff;outline:none}
+
+  /* ---------- hero ---------- */
+  header{background:var(--fir);color:#F2F6F0;padding:3rem 1.2rem 3.4rem;text-align:center;position:relative;overflow:hidden}
+  header .eyebrow{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);font-weight:700}
+  header h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:700;margin:.4rem 0 .6rem;line-height:1.1}
+  header p.sub{max-width:34rem;margin:0 auto;color:#C9D8CC;font-size:1rem}
+  .rings{margin:1.8rem auto 0;display:block;max-width:520px;width:100%;height:auto}
+  .rings text{font-family:'Karla',sans-serif}
+
+  /* ---------- layout ---------- */
+  main{max-width:1080px;margin:0 auto;padding:0 1.1rem 4rem}
+  section{padding-top:2.8rem}
+  .kicker{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brick)}
+  section>h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:var(--fir);margin:.2rem 0 .35rem}
+  .lede{color:var(--mut);max-width:44rem;margin-bottom:1.4rem}
+
+  /* ---------- cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.05rem 1.1rem;
+        display:flex;flex-direction:column;gap:.45rem}
+  .card h3{font-size:1.12rem;font-weight:600;color:var(--fir)}
+  .row{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+  .chip{font-size:.72rem;font-weight:700;letter-spacing:.05em;border-radius:99px;padding:.18rem .6rem;
+        border:1.5px solid var(--amber);color:#8A6420;background:var(--amber-soft)}
+  .tag{font-size:.72rem;font-weight:700;color:var(--mut);background:#ECF1EA;border-radius:99px;padding:.2rem .6rem}
+  .tag.warn{background:#F7E4DC;color:var(--brick)}
+  .card p{font-size:.92rem}
+  .meta{font-size:.8rem;color:var(--mut)}
+  .meta b{color:var(--ink)}
+
+  /* ---------- map embed ---------- */
+  .map-wrap{border:2px dashed var(--moss);border-radius:16px;background:#EAF0E8;padding:1rem;margin-top:1.2rem}
+  .map-slot iframe{width:100%;height:480px;border:0;border-radius:10px;display:block}
+  .map-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+        min-height:300px;gap:.5rem;color:var(--moss)}
+  .map-placeholder strong{font-family:'Fraunces',serif;font-size:1.2rem}
+  .map-placeholder code{background:#fff;border:1px solid var(--line);border-radius:6px;padding:.15rem .45rem;font-size:.8rem}
+
+  /* ---------- itinerary ---------- */
+  .day{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--moss);
+       border-radius:12px;padding:1rem 1.15rem;margin-bottom:.8rem}
+  .day h3{font-size:1.05rem;color:var(--fir)}
+  .day .dlabel{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:.15rem}
+  .day p{font-size:.92rem;margin-top:.3rem}
+
+  /* ---------- checklist / dark band ---------- */
+  .band{background:var(--fir);color:#EAF1EA;border-radius:18px;padding:1.6rem 1.4rem;margin-top:2.8rem}
+  .band h2{color:#fff;font-size:1.5rem;margin-bottom:.3rem}
+  .band .kicker{color:var(--amber)}
+  .band ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}
+  .band li{background:var(--moss);border-radius:99px;padding:.35rem .8rem;font-size:.85rem}
+  .band p{color:#C9D8CC;font-size:.9rem}
+
+  .booklist li{background:var(--brick)}
+
+  footer{max-width:1080px;margin:0 auto;padding:1.5rem 1.2rem 3rem;color:var(--mut);font-size:.8rem;text-align:center}
+
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<nav aria-label="Sections"><div class="inner">
+  <a href="#map">Map</a>
+  <a href="#itinerary">Itinerary</a>
+  <a href="#activities">Activities</a>
+  <a href="#afield">Further afield</a>
+  <a href="#restaurants">Restaurants</a>
+  <a href="#bakeries">Bakeries</a>
+  <a href="#icecream">Ice cream</a>
+  <a href="#bars">Bars</a>
+  <a href="#active">Gyms &amp; biking</a>
+  <a href="#food">Food list</a>
+</div></nav>
+
+<header>
+  <span class="eyebrow">Family week · Belgian Ardennes</span>
+  <h1>Everything within an hour<br>of Randoux 1</h1>
+  <p class="sub">One villa in Mabompré, three generations, seven days. Every place in this guide is measured in minutes from our front door — pool and jacuzzi included at 0 min.</p>
+  <svg class="rings" viewBox="0 0 520 300" role="img" aria-label="Concentric rings showing drive times from the house: 5, 25 and 50 minutes">
+    <g fill="none" stroke="#3E6350" stroke-width="1.5">
+      <circle cx="260" cy="150" r="46"/>
+      <circle cx="260" cy="150" r="96" stroke-dasharray="3 5"/>
+      <circle cx="260" cy="150" r="142" stroke-dasharray="3 5"/>
+    </g>
+    <circle cx="260" cy="150" r="6" fill="#D9A03F"/>
+    <text x="260" y="132" text-anchor="middle" fill="#F2F6F0" font-size="12" font-weight="700">THE HOUSE</text>
+    <text x="260" y="97" text-anchor="middle" fill="#9DBBA6" font-size="10">5 min · Houffalize</text>
+    <text x="260" y="48" text-anchor="middle" fill="#9DBBA6" font-size="10">25 min · Bastogne · La Roche</text>
+    <text x="260" y="14" text-anchor="middle" fill="#9DBBA6" font-size="10">50 min+ · Spa · Durbuy · Vianden · Coo</text>
+    <circle cx="300" cy="120" r="3.5" fill="#EAF1EA"/><text x="308" y="124" fill="#C9D8CC" font-size="9">Chouffe</text>
+    <circle cx="205" cy="205" r="3.5" fill="#EAF1EA"/><text x="150" y="209" fill="#C9D8CC" font-size="9">Bastogne</text>
+    <circle cx="165" cy="115" r="3.5" fill="#EAF1EA"/><text x="105" y="119" fill="#C9D8CC" font-size="9">La Roche</text>
+    <circle cx="380" cy="70" r="3.5" fill="#EAF1EA"/><text x="388" y="74" fill="#C9D8CC" font-size="9">Spa · Coo</text>
+    <circle cx="120" cy="60" r="3.5" fill="#EAF1EA"/><text x="66" y="64" fill="#C9D8CC" font-size="9">Durbuy</text>
+  </svg>
+</header>
+
+<main>
+
+<!-- ============ MAP ============ -->
+<section id="map">
+  <span class="kicker">Shared map</span>
+  <h2>The family map</h2>
+  <div class="map-wrap">
+    <div class="map-slot">
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=16lBUzqYi5SCwaX2mIc5aFfpsqNADjmk&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section id="activities">
+  <span class="kicker">With the kids &amp; the whole group</span>
+  <h2>Activities &amp; sights</h2>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Ages 2–7</span><span class="tag">Rainy-day card</span></div>
+      <h3>Houtopia</h3>
+      <p>Children's discovery centre in Houffalize: interactive exhibits indoors, a big playground outside, café for the adults. Aimed squarely at your kids' ages — plan 2–3 hours. Free parking 100 m away.</p>
+      <p class="meta"><b>Open</b> daily 10:00–18:00 · Pl. de l'Eglise 17 · +32 61 28 92 05</p></div>
+
+    <div class="card"><div class="row"><span class="chip">10 min</span><span class="tag warn">Book online</span></div>
+      <h3>Brasserie Chouffe</h3>
+      <p>Home of La Chouffe, the gnome-branded blonde, in the fairy-tale hamlet of Achouffe. Guided tour ends with a tasting; kids get colouring sheets. Tours sell out — book online early and mention your group size. Tavern next door for lunch.</p>
+      <p class="meta"><b>Open</b> daily 10:00–17:00 (18:00 weekends) · chouffe.com</p></div>
+
+    <div class="card"><div class="row"><span class="chip">15 min</span><span class="tag">Free</span></div>
+      <h3>Le Hérou viewpoint</h3>
+      <p>80-metre cliffs above a hairpin bend of the Ourthe near Nadrin — the most dramatic scenery in the area. Short out-and-back viewpoint walks for everyone; longer river loops for the fit. Trails are rooty: baby carrier, not stroller.</p>
+      <p class="meta"><b>Open</b> always · park at the old Belvédère in Nadrin</p></div>
+
+    <div class="card"><div class="row"><span class="chip">15 min</span><span class="tag">Free</span></div>
+      <h3>Barrage de Nisramont</h3>
+      <p>Dam and lake where the two Ourthes meet. Lakeside café by the parking, short shoreline strolls, kayaking on flat water, and a beautiful (steep, 13 km) full-lake loop for serious walkers with good shoes.</p>
+      <p class="meta"><b>Open</b> always · café at the foot of the dam</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag">All ages</span><span class="tag">Rainy-day card</span></div>
+      <h3>Bastogne War Museum &amp; Mardasson</h3>
+      <p>The region's must-see: the Battle of the Bulge told through a headphone narration from four personal perspectives, with three cinematic set-pieces. Plan ~2.5 h; ticket includes other Bastogne sites and town parking. The Mardasson Memorial outside is good toddler run-around space.</p>
+      <p class="meta"><b>Open</b> daily 9:30–19:00 · Colline du Mardasson 5 · +32 61 21 02 20</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag">Toddler gold</span></div>
+      <h3>Le Parc à Gibier, La Roche</h3>
+      <p>Forest wildlife park with deer, boar, wolves and lynx, plus a playground and café. Healthy, well-kept animals and generous enclosures. It's on a hillside — steep in places, so carrier over stroller.</p>
+      <p class="meta"><b>Open</b> daily 10:00–19:00 · +32 470 10 80 78</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span></div>
+      <h3>Château Féodal, La Roche</h3>
+      <p>Ruined 11th-century castle crowning the prettiest river town in the Ardennes. Kids clamber the ramparts, free archery activity, great views over town. Cash for entry and the castle bar. Combine with wildlife park + ice cream for a full La Roche day.</p>
+      <p class="meta"><b>Open</b> daily 10:00–18:00 · +32 84 41 13 42</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag">Adults + teens</span></div>
+      <h3>Kayaking the Ourthe</h3>
+      <p>Classic Ardennes activity from La Roche: rental outfits shuttle you upstream and you paddle calm water back to town. Brandsport (+32 84 41 10 84) and Ardenne Aventures (+32 84 41 19 00) both handle groups; book a morning slot in summer for water levels and parking.</p>
+      <p class="meta"><b>Season</b> daily ~10:00–15:00 starts · not for the under-4s</p></div>
+
+    <div class="card"><div class="row"><span class="chip">30 min</span><span class="tag">Ages 3–10</span></div>
+      <h3>Parc Chlorophylle</h3>
+      <p>Forest discovery-and-play park at Dochamps: treetop walkway, themed play stations and art installations along an easy trail, restaurant on site. Families with kids exactly your ages rate it the best value day in the region. Book online for a small discount.</p>
+      <p class="meta"><b>Open</b> daily 9:30–18:30 · +32 84 37 87 74</p></div>
+
+    <div class="card"><div class="row"><span class="chip">30 min</span><span class="tag warn">Closed Wed</span></div>
+      <h3>Clervaux Castle (Luxembourg)</h3>
+      <p>White hilltop castle above a pretty valley town: Edward Steichen's UNESCO-listed "Family of Man" photo exhibition, a Battle of the Bulge museum, and a castle-model collection. Easy strolling and good cafés — ideal pace for the older generation.</p>
+      <p class="meta"><b>Open</b> Thu–Tue 10:00–17:00 · +352 28 41 98</p></div>
+
+    <div class="card"><div class="row"><span class="chip">50 min</span><span class="tag">Rides from 85 cm</span></div>
+      <h3>Plopsaland Ardennes, Coo</h3>
+      <p>Small, gentle theme park genuinely built for pre-schoolers — many rides open from 85 cm, whole park doable in a day, next to the Coo waterfalls and a cable car viewpoint. Closes 18:00, so arrive at opening. Park just outside the entrance to save a few euros.</p>
+      <p class="meta"><b>Open</b> daily 10:00–18:00 in season · plopsacoo.be</p></div>
+
+    <div class="card"><div class="row"><span class="chip">1 h 10</span><span class="tag">Big day trip</span><span class="tag">Rainy-day card</span></div>
+      <h3>Domain of the Caves of Han</h3>
+      <p>Belgium's most spectacular caves — vast chambers reached by a charming old tram — plus a safari park with bears, wolves and bison. Cave tour is walkable with a 4-year-old; bring the carrier for the little one and warm layers (it's cold underground).</p>
+      <p class="meta"><b>Open</b> daily from 10:00 · grotte-de-han.be · +32 84 37 72 13</p></div>
+  </div>
+</section>
+
+<!-- ============ FURTHER AFIELD ============ -->
+<section id="afield">
+  <span class="kicker">If the week has room</span>
+  <h2>Further afield</h2>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">45 min</span><span class="tag">Best all-ages add-on</span></div>
+      <h3>Durbuy + Topiary Park</h3>
+      <p>"The smallest town in the world" — cobbled lanes, stone houses, riverside castle, and the prettiest streets in the Ardennes. Next door, the Topiary Park (€5, flat and easy) is full of animal-shaped hedges toddlers love spotting. Slots naturally onto the Chlorophylle day or Friday.</p>
+      <p class="meta"><b>Topiary Park</b> daily 10:00–18:00 · paid parking out front</p></div>
+
+    <div class="card"><div class="row"><span class="chip">50 min</span><span class="tag">Adults' half day</span></div>
+      <h3>Spa town &amp; Thermes de Spa</h3>
+      <p>The original spa town — the word comes from here. Faded-grandeur arcades, a casino, and hilltop thermal baths reached by funicular (pools, saunas, hammams; day passes with lunch available). Adults-oriented — check the age policy — and your villa already has a pool and jacuzzi, so treat it as an aunts-and-uncles outing.</p>
+      <p class="meta"><b>Thermes</b> daily from 9:00 · +32 87 77 25 60</p></div>
+
+    <div class="card"><div class="row"><span class="chip">50 min</span><span class="tag">Wow factor</span></div>
+      <h3>Vianden Castle (Luxembourg)</h3>
+      <p>The most spectacular castle in the region by a distance: a fully restored fairy-tale hilltop fortress above a lovely river town. Chairlift up for the classic view, €2 audio guide worth every cent, manageable for less mobile relatives. Better than Clervaux if you only do one Luxembourg castle.</p>
+      <p class="meta"><b>Open</b> daily 10:00–18:00 · +352 83 41 08 1</p></div>
+
+    <div class="card"><div class="row"><span class="chip">55 min</span><span class="tag warn">Check GP dates</span></div>
+      <h3>Circuit de Spa-Francorchamps</h3>
+      <p>The legendary F1 track, 10 minutes from Spa town. Outside race weekends you can often walk the grandstands, see Eau Rouge in person, visit the museum or watch track days. If the Belgian Grand Prix (late July) overlaps your week, the whole Stavelot/Coo area will be jammed — check before driving that way.</p>
+      <p class="meta"><b>Open</b> daily 9:00–18:00 · +32 87 29 37 00</p></div>
+
+    <div class="card"><div class="row"><span class="chip">1 h 10</span><span class="tag">Optional city day</span></div>
+      <h3>Luxembourg City</h3>
+      <p>UNESCO old town perched on cliffs above the fairy-tale Grund quarter — free elevator between the levels, café terraces everywhere, and public transport is free nationwide. Only worth the drive if the group wants one proper city fix; the Ardennes is the star of this trip.</p>
+      <p class="meta"><b>Tip</b> park at a P+R and ride in free</p></div>
+  </div>
+</section>
+
+<!-- ============ RESTAURANTS ============ -->
+<section id="restaurants">
+  <span class="kicker">Where we eat</span>
+  <h2>Restaurants</h2>
+  <p class="lede">Golden rule for a group this size: <b>always call ahead</b>, even for casual places. Ardennes kitchens are small, many close Monday–Wednesday, and most stop serving by 20:30–21:00.</p>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag warn">Closed Mon &amp; Thu</span><span class="tag">Book</span></div>
+      <h3>L'Atelier · Houffalize</h3>
+      <p>The best table in town — seasonal, creative cooking at fair prices, 4.8★ from 300+ reviews. Small room with one valiant server, so book and don't rush. Perfect for the parents' night out while relatives babysit.</p>
+      <p class="meta"><b>Hours</b> lunch Wed/Fri/Sun, dinner Tue/Wed/Fri–Sun 18:30–20:30 · +32 61 21 14 19</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Daily</span><span class="tag">Kid-friendly</span></div>
+      <h3>Le Rallye · Houffalize</h3>
+      <p>Relaxed brasserie by the bridge: stoofvlees, ribs, burgers, genuinely good vegetarian and vegan options, terrace for watching the cyclists roll past. Friendly with dietary requests.</p>
+      <p class="meta"><b>Hours</b> daily 10:00–22:00 · +32 61 68 81 55</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Daily · late</span><span class="tag">Groups</span></div>
+      <h3>Brasserie Le Montmartre · Houffalize</h3>
+      <p>All-day bar-brasserie that has squeezed in walk-in groups of seven without blinking. Liège meatballs, steaks, pasta; doubles as the town's latest-open bar.</p>
+      <p class="meta"><b>Hours</b> daily 8:30–23:00 (24:00 Fri–Sun) · +32 61 46 91 22</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Daily</span></div>
+      <h3>La Grande Bleue · Houffalize</h3>
+      <p>The curveball: excellent Moroccan/Mediterranean — lamb-shank tajine, couscous, mezze — for the night the group wants a break from Belgian classics. Warm service, big portions.</p>
+      <p class="meta"><b>Hours</b> daily 11:30–14:30, 17:30–22:00 · +32 61 31 43 20</p></div>
+
+    <div class="card"><div class="row"><span class="chip">10 min</span><span class="tag warn">Thu–Sun only</span><span class="tag">Top pick</span></div>
+      <h3>Charme de Wibrin</h3>
+      <p>Beloved village bistro, 4.8★ from 600+ reviews: Belgian classics done beautifully (try the Orvaliflette), fair prices, staff who can't do enough for you. The obvious choice for the big Sunday group dinner — book early and pre-order from Bultot on the way home.</p>
+      <p class="meta"><b>Hours</b> Thu–Sat 11:00–20:00, Sun 9:00–20:00 · charmedewibrin.be</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag warn">Closed Mon</span></div>
+      <h3>Wagon Léo · Bastogne</h3>
+      <p>Bastogne institution since the 1940s, grown from a dining-car into the town's classic address. Famous for moules-frites and seafood; polished service that handles big family tables well. Book for the farewell dinner.</p>
+      <p class="meta"><b>Hours</b> Tue–Sun 11:45–15:00, 17:30–21:30 · +32 61 21 14 41</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag warn">Closed Mon–Tue</span></div>
+      <h3>Brasserie Lamborelle · Bastogne</h3>
+      <p>Hearty food and the local Airborne beer served in a miniature helmet — honouring the GI who carried beer to the wounded in his helmet on this very spot in 1944. Menu in French; the staff translate cheerfully. Fills fast — book on museum day.</p>
+      <p class="meta"><b>Hours</b> Wed 17:00–23:00, Thu–Sun from 11:00 · +32 61 21 80 55</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag">Daily</span></div>
+      <h3>Le Quai Son · La Roche</h3>
+      <p>The best terrace in La Roche, looking straight at the castle. Wild boar stew, excellent steaks, long Belgian beer list. Service is friendly but stretched at peak hours — order everything at once.</p>
+      <p class="meta"><b>Hours</b> daily 10:30–22:00 (23:30 Fri–Sat) · +32 84 75 22 80</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag warn">Closed Wed–Thu</span></div>
+      <h3>Signé Jeanne · La Roche</h3>
+      <p>Generous, well-made Belgian food — filets with pepper or Rochefort cream sauce are the signature — and relaxed about groups of ten with no fuss. Solid second option in La Roche.</p>
+      <p class="meta"><b>Hours</b> Fri–Tue 10:00–21:00 (Sun to 18:00) · +32 84 41 11 90</p></div>
+  </div>
+</section>
+
+<!-- ============ BAKERIES ============ -->
+<section id="bakeries">
+  <span class="kicker">Morning runs</span>
+  <h2>Bakeries</h2>
+  <p class="lede">Very Belgian tip: phone a day ahead and pre-order — 15 croissants at 8 am is a normal request, and it beats the morning scramble. Staff answer in French but manage fine in English.</p>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Daily from 6:30</span></div>
+      <h3>Valentine · Houffalize</h3>
+      <p>The easiest daily run: pâtisserie with seating, coffee, and legendary filled pains au chocolat (vanilla cream + banana gets rave reviews). Also scoops ice cream, so the croissant run can escalate. Try the citron meringue.</p>
+      <p class="meta"><b>Hours</b> daily 6:30–18:30 · Pl. de l'Eglise 15 · +32 61 32 11 09</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag warn">Closed Tue</span></div>
+      <h3>Philippart · Houffalize</h3>
+      <p>The locals' bread bakery — excellent loaves and a superb tarte au sucre, the classic Walloon sugar tart. Croissants sell out; go before 9 or pre-order.</p>
+      <p class="meta"><b>Hours</b> Mon, Wed–Sat 6:30–18:30, Sun 6:30–12:00 · +32 61 28 80 89</p></div>
+
+    <div class="card"><div class="row"><span class="chip">10 min</span><span class="tag warn">Closed Mon</span><span class="tag">Best in area</span></div>
+      <h3>Bultot · near Wibrin</h3>
+      <p>Arguably the best baking in the region: sourdough, viennoiserie, house chocolates, mirror-glaze pastries "to die for". Sells out — go early. Conveniently on the road back from Wibrin and the Nisramont walks.</p>
+      <p class="meta"><b>Hours</b> Tue–Fri 7:00–18:00, Sat 7:00–17:00, Sun 7:00–13:30 · +32 84 44 41 03</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag">Daily</span></div>
+      <h3>Delhaye · Bastogne</h3>
+      <p>On Place McAuliffe, the main square — sandwiches, pastries and cured-meat treats. The natural grab-and-go stop on War Museum day.</p>
+      <p class="meta"><b>Hours</b> daily 7:00–18:30 · +32 61 21 12 00</p></div>
+  </div>
+</section>
+
+<!-- ============ ICE CREAM ============ -->
+<section id="icecream">
+  <span class="kicker">Priority category</span>
+  <h2>Ice cream</h2>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Open 24/7</span><span class="tag">House favourite</span></div>
+      <h3>Le Préai Glacé · Taverneux</h3>
+      <p>A farm five minutes from the villa selling its own homemade ice cream from vending machines — around the clock, card and Apple Pay accepted. Also farm milk, chocolate milk, bread and eggs. The midnight ice cream run is officially on the table.</p>
+      <p class="meta"><b>Hours</b> 24/7 · Taverneux 29 · +32 498 54 20 18</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag">Best in La Roche</span></div>
+      <h3>Le Petit Chevalier · La Roche</h3>
+      <p>Artisan glacier that wins every local comparison — one reviewer tried all the ice cream in town and crowned it. Amarena and blueberry are the stars; natural flavours, not too sweet, fresh cones. Mandatory stop on the La Roche day.</p>
+      <p class="meta"><b>Find it</b> Rue du Purnalet 12, just off the square</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag warn">Wed/Fri/Sat/Sun pm</span></div>
+      <h3>Un P'tit Quelque Chose · Bihain</h3>
+      <p>Farm glacerie with a garden terrace — ice cream churned from their own milk, and a myrtille (bilberry) flavour people call the best they've ever had. Limited hours; pair it with a scenic drive.</p>
+      <p class="meta"><b>Hours</b> Wed &amp; Fri 14:00–18:00, Sat–Sun 14:00–21:00 · +32 471 17 21 52</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag warn">Closed Mon</span></div>
+      <h3>Melba's · Bastogne</h3>
+      <p>Pastry-café on the main square: ice cream, proper Belgian waffles with fruit and cream, éclairs with a serious chocolate glaze. The museum-day reward.</p>
+      <p class="meta"><b>Hours</b> Tue–Sun 6:30–19:00 · +32 61 21 11 48</p></div>
+
+    <div class="card"><div class="row"><span class="tag">Supermarket freezer</span></div>
+      <h3>For the villa freezer</h3>
+      <p><b>IJsboerke</b> is the classic Belgian brand in every freezer aisle — vanilla and mokka are national nostalgia. Also grab anything labelled <i>glace fermière / artisanale</i> (local farm tubs usually beat the big brands) and a bag of Callebaut chocolate callets to melt over everything.</p>
+      <p class="meta"><b>Where</b> Spar/AD Delhaize in Houffalize, 5 min</p></div>
+  </div>
+</section>
+
+<!-- ============ BARS ============ -->
+<section id="bars">
+  <span class="kicker">For the evening crew</span>
+  <h2>Bars</h2>
+  <p class="lede">Sorted by how far the designated driver has to go. And remember: the villa's meeting room has its own bar, and supermarket trappists cost about €2 a bottle — the best nightlife in Mabompré may be homemade.</p>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag warn">Closed Mon</span></div>
+      <h3>Les 3 Passerelles · Houffalize</h3>
+      <p>Proper local pub on the Place du Crucifix with a good Belgian beer list. The natural "quick pint once the kids are down" option.</p>
+      <p class="meta"><b>Hours</b> Tue–Sun until 23:00 · +32 61 28 93 84</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Latest in town</span></div>
+      <h3>Le Montmartre · Houffalize</h3>
+      <p>The bar side of the brasserie stays open latest in town — 23:00 weekdays, midnight Friday to Sunday. Terrace, friendly mix of locals and cyclists.</p>
+      <p class="meta"><b>Hours</b> daily to 23:00 / 24:00 Fri–Sun</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag warn">Closes 18:30</span></div>
+      <h3>Le Grandcafé · Houffalize</h3>
+      <p>Serious beer list including Orval on the menu — but it shuts at 18:30, so this is the après-bike and apéro stop, not the nightcap.</p>
+      <p class="meta"><b>Hours</b> Thu–Mon 9:30–18:30, closed Tue–Wed</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag">The night out</span><span class="tag warn">Cash</span></div>
+      <h3>Baraddur · Bastogne</h3>
+      <p>A 5.0★ board-game bar: local beers, regional charcuterie boards, hundreds of games, and owners who explain the rules in perfect English. Reviewers came in to warm up and stayed six hours. Open till 1–3 am Thursday–Saturday.</p>
+      <p class="meta"><b>Hours</b> Thu 18–01, Fri 18–03, Sat 18–24, Sun 15–20 · bring cash</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span></div>
+      <h3>Caliente Lounge Bar · Bastogne</h3>
+      <p>Cocktails and a party atmosphere on Rue Lamborelle, open till 1–2 am most nights — the second act if Baraddur closes on you.</p>
+      <p class="meta"><b>Hours</b> Tue–Sun evenings till 24:00–02:00</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag warn">Closed Tue–Wed</span></div>
+      <h3>Le Flamand Perdu · La Roche</h3>
+      <p>Tiny 4.9★ beer bar tucked off the square — excellent bottle list, lovely host, "best pub in Belgium" per one convert. Pairs perfectly with a La Roche dinner.</p>
+      <p class="meta"><b>Hours</b> Thu–Sat 14:00–24:00, Sun–Mon 14:00–02:00</p></div>
+  </div>
+</section>
+
+<!-- ============ GYMS & BIKING ============ -->
+<section id="active">
+  <span class="kicker">For the 30-somethings</span>
+  <h2>Gyms &amp; biking</h2>
+  <p class="lede">Houffalize is Belgium's mountain-biking capital — it hosts the UCI MTB World Cup, and marked trails start in town, with a mountain-bike route passing 100 m from the villa. The hills are real: e-MTBs earn their rental fee here.</p>
+  <div class="grid">
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag">24/7 · day pass ~€9</span></div>
+      <h3>Basic-Fit · Bastogne</h3>
+      <p>The reliable option: open around the clock, full equipment, day pass from the self-service kiosk at the entrance — no membership needed.</p>
+      <p class="meta"><b>Where</b> Rue de Marche 167</p></div>
+
+    <div class="card"><div class="row"><span class="chip">20 min</span><span class="tag">5.0★</span></div>
+      <h3>CrossFit Mind Steel · Bastogne</h3>
+      <p>Well-loved box next door to Basic-Fit with a warm community. Message ahead via their socials for a drop-in class.</p>
+      <p class="meta"><b>Hours</b> Mon–Fri 8:30–20:00, Sat to 15:30, Sun morning</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag warn">Call first</span></div>
+      <h3>Vayamundo Fitness · Houffalize</h3>
+      <p>The closest gym, in the forest at the Vayamundo resort — but it may be for hotel guests only. Call before counting on it.</p>
+      <p class="meta"><b>Phone</b> +32 496 72 07 17</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Groups OK</span></div>
+      <h3>Houffa Bike · Houffalize</h3>
+      <p>Quality MTB and e-MTB rental with enough bikes for a big group, on-the-spot pedal swaps, and guides on request. Ask for the beautiful 28 km loop or directions onto the World Cup circuit.</p>
+      <p class="meta"><b>Hours</b> daily 9:00–18:00 · Av. de la Gare 23 · +32 498 36 34 14</p></div>
+
+    <div class="card"><div class="row"><span class="chip">5 min</span><span class="tag">Road cycling</span></div>
+      <h3>Côte de Saint-Roch</h3>
+      <p>The famous Liège–Bastogne–Liège wall climbs straight out of Houffalize town centre — short, brutally steep, lined with painted names on race day. Riding it is a rite of passage in this valley.</p>
+      <p class="meta"><b>Bonus</b> coffee at Rouleur, the cyclists' café in town</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag">Easy / flat</span></div>
+      <h3>Vennbahn rail-trail</h3>
+      <p>One of Europe's longest railway cycle paths starts at Troisvierges — gentle rail-grade gradients through lovely country, ideal for a mixed-ability or e-bike day when the MTB crowd needs recovery legs.</p>
+      <p class="meta"><b>Start</b> Troisvierges (LU), ~25 min drive</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag warn">Closed Mon</span></div>
+      <h3>So Watt · La Roche</h3>
+      <p>Near-new e-MTBs in all sizes with mapped routes from the door (route 4 gets special praise). Multilingual, flexible, water bottles included.</p>
+      <p class="meta"><b>Hours</b> Tue–Sun ~9:00–17:00 · +32 470 29 09 03</p></div>
+
+    <div class="card"><div class="row"><span class="chip">25 min</span><span class="tag">Groups of 20+</span></div>
+      <h3>Trott-e-Trail · La Roche</h3>
+      <p>Guided off-road electric-scooter tours through the hills — ask for the adventurous version. Has handled groups of 21 happily, so this could even be the whole-family-minus-toddlers outing.</p>
+      <p class="meta"><b>Hours</b> daily from 9:00–9:30 · +32 477 04 89 67</p></div>
+  </div>
+</section>
+
+<!-- ============ FOOD CHECKLIST + BOOKINGS ============ -->
+<section id="food">
+  <div class="band">
+    <span class="kicker">First time in Belgium</span>
+    <h2>The food checklist</h2>
+    <p>Tick them all off before Saturday:</p>
+    <ul>
+      <li>Moules-frites</li><li>Carbonade / stoofvlees</li><li>Boulets à la liégeoise</li>
+      <li>Jambon d'Ardenne</li><li>Wild boar or venison</li><li>Friterie fries + mayo</li>
+      <li>Liège waffles</li><li>La Chouffe</li><li>Orval</li><li>Rochefort</li>
+      <li>Airborne (helmet cup)</li><li>Belgian chocolate</li><li>Tarte au sucre</li><li>IJsboerke</li>
+    </ul>
+  </div>
+
+  <div class="band" style="margin-top:1rem">
+    <span class="kicker">Do this first</span>
+    <h2>Book early</h2>
+    <p>The four reservations that make the week work, in order of urgency:</p>
+    <ul class="booklist">
+      <li>Chouffe brewery tour (online, mention group size)</li>
+      <li>Charme de Wibrin — Sunday dinner</li>
+      <li>L'Atelier — Tuesday, parents' night</li>
+      <li>Wagon Léo — Friday farewell</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Ardennes family week · base: Randoux 1, 6663 Mabompré (Houffalize), Belgium ·
+  hours and prices checked summer 2026 — re-confirm before you go. Drive times are approximate; add minutes for tractors.
+</footer>
+
+</body>
+</html>
