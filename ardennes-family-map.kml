@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Ardennes Family Trip 2026 — complete</name>
+  <description>Full trip map, 14–21 August 2026 — every place in the guide. Colors: green activities, purple day trips, blue restaurants, yellow friteries, white bakeries, pink ice cream, light-blue bars, diamond gyms/bikes, red shops+emergency.</description>
+  <Style id="home"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
+  <Style id="act"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon></IconStyle></Style>
+  <Style id="afield"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/purple-circle.png</href></Icon></IconStyle></Style>
+  <Style id="resto"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon></IconStyle></Style>
+  <Style id="frit"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href></Icon></IconStyle></Style>
+  <Style id="bak"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-circle.png</href></Icon></IconStyle></Style>
+  <Style id="ice"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/pink-circle.png</href></Icon></IconStyle></Style>
+  <Style id="bar"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ltblu-circle.png</href></Icon></IconStyle></Style>
+  <Style id="gym"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href></Icon></IconStyle></Style>
+  <Style id="prac"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+  <Folder>
+    <name>Home base</name>
+    <Placemark><name>Our holiday house (Randoux 1, Mabompré)</name>
+      <description>Randoux 1, 6663 Houffalize, Belgium — villa with pool &amp; spa, 2 km from Houffalize [Pin moved to the OSM-verified Randoux hamlet (Ferme de Randoux) — the old pin sat 3 km north. Double-check against the booking confirmation.]</description>
+      <styleUrl>#home</styleUrl><Point><coordinates>5.7751469,50.1146468,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Activities &amp; sights</name>
+    <Placemark><name>Houtopia (kids' center)</name>
+      <description>Pl. de l'Eglise 17, Houffalize. Indoor/outdoor children's center, ideal ages 2–7. Open daily 10–18.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.788354,50.133492,0</coordinates></Point></Placemark>
+    <Placemark><name>Brasserie Chouffe (brewery tour)</name>
+      <description>Achouffe 32, Houffalize. Book the tour online in advance — tasting included, coloring sheets for kids.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.745809,50.15099,0</coordinates></Point></Placemark>
+    <Placemark><name>Bastogne War Museum &amp; Mardasson Memorial</name>
+      <description>Colline du Mardasson 5, Bastogne. The must-see of the region; ticket includes other sites. Open daily 9:30–19.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.739088,50.010694,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Parc à Gibier de La Roche (wildlife park)</name>
+      <description>Ardennes animals + playground. Hilly — bring a carrier, not a stroller. Open daily 10–19.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.590708,50.188486,0</coordinates></Point></Placemark>
+    <Placemark><name>Château Féodal de La Roche-en-Ardenne</name>
+      <description>Castle ruins with free archery — fun for the 4-year-old. Open daily 10–18.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.576444,50.182106,0</coordinates></Point></Placemark>
+    <Placemark><name>Parc Chlorophylle (forest play park)</name>
+      <description>Dochamps/Manhay. Great for ages 3–10; book online for a small discount. Open daily 9:30–18:30.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.596618,50.241979,0</coordinates></Point></Placemark>
+    <Placemark><name>Plopsaland Ardennes (Coo)</name>
+      <description>Gentle theme park, many rides from 85 cm. Next to the Coo waterfalls. Open daily 10–18.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.873214,50.393423,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Hérou viewpoint (Nadrin)</name>
+      <description>Dramatic 80 m cliffs over the Ourthe — best views in the area. Free, always open.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.661732,50.155031,0</coordinates></Point></Placemark>
+    <Placemark><name>Barrage de Nisramont (lake &amp; dam)</name>
+      <description>Lakeside café, short walks or the full 13 km loop. Free, always open.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.66929,50.144321,0</coordinates></Point></Placemark>
+    <Placemark><name>Clervaux Castle (Luxembourg)</name>
+      <description>Family of Man photo exhibition + Battle of the Bulge museum. Closed Wednesdays.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>6.030115,50.05446,0</coordinates></Point></Placemark>
+    <Placemark><name>Domain of the Caves of Han</name>
+      <description>Rochefort. Spectacular caves + safari park — the big day trip (~1h10 drive).</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.191531,50.12434,0</coordinates></Point></Placemark>
+    <Placemark><name>Riverside playground &amp; minigolf (Houffalize)</name>
+      <description>5 min · Free. Playground by the Ourthe + renovated 18-hole minigolf at Cour de l'Abbaye, next to Houtopia. Valentine ice cream 2 min walk.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.7881,50.1334,0</coordinates></Point></Placemark>
+    <Placemark><name>RAVeL line 163 rail-trail (start)</name>
+      <description>5 min · Free · Stroller OK. Old Houffalize–Bastogne railway, now a flat car-free path. Start near the old station on Av. de la Gare; out-and-back toward Bourcy.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.7915450,50.1312588,0</coordinates></Point></Placemark>
+    <Placemark><name>Kayaking — Ardenne Aventures (La Roche)</name>
+      <description>25 min · Adults + teens, not under-4s. Shuttle upstream, paddle back to town. +32 84 41 19 00 (also Brandsport +32 84 41 10 84). August can run low — call the day before.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.5764949,50.1840642,0</coordinates></Point></Placemark>
+    <Placemark><name>Ferme équestre des Monts (Sommerain)</name>
+      <description>15 min · Ages 4+. Pony rides for the kids, pony games from age 4, 1.5–3 h forest rides for adults. Call ahead: +32 476 45 70 54 · Sommerain 79 (pin = village)</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.8154819,50.1602566,0</coordinates></Point></Placemark>
+    <Placemark><name>Maboge-Plage (river swimming)</name>
+      <description>25 min · Free. River beach on the Ourthe: shallow bathing zone, playground, cafeteria, showers (Jul–Aug). Free parking. Beach is on the riverbank just outside the village.</description>
+      <styleUrl>#act</styleUrl><Point><coordinates>5.6279098,50.1686557,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Further afield</name>
+    <Placemark><name>Durbuy old town</name>
+      <description>~45 min. "Smallest town in the world" — cobbled lanes, stone houses, riverside castle. Best all-generations addition; pairs with Parc Chlorophylle or Friday.</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>5.455652,50.352018,0</coordinates></Point></Placemark>
+    <Placemark><name>Topiary Park (Durbuy)</name>
+      <description>Rue de la Haie Himbe 1. €5, flat easy stroll — animal-shaped hedges the toddlers can spot. Open daily 10–18. Paid parking out front.</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>5.453082,50.352502,0</coordinates></Point></Placemark>
+    <Placemark><name>Spa town &amp; Thermes de Spa</name>
+      <description>~50 min. The original spa town — casino, arcades, hilltop thermal baths via funicular. Adults-oriented; check age policy before bringing kids. Best as an aunts-and-uncles half day. Open daily from 9.</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>5.864062,50.494281,0</coordinates></Point></Placemark>
+    <Placemark><name>Circuit de Spa-Francorchamps</name>
+      <description>~55 min, 10 min from Spa town. Legendary F1 track — grandstands, museum, track days outside race weekends. Check Belgian GP dates (late July) — area is packed then.</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>5.966161,50.443682,0</coordinates></Point></Placemark>
+    <Placemark><name>Vianden Castle (Luxembourg)</name>
+      <description>~50 min. The most spectacular castle in the region — restored fairy-tale hilltop fortress, chairlift up, €2 audio guide worth it. Open daily 10–18. Better than Clervaux if you only do one.</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>6.202722,49.935034,0</coordinates></Point></Placemark>
+    <Placemark><name>Luxembourg City (old town &amp; Grund)</name>
+      <description>~1h10. UNESCO old town on cliffs above the Grund quarter — free elevator between levels, free public transport nationwide. Only if you want a city day.</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>6.140821,49.610866,0</coordinates></Point></Placemark>
+    <Placemark><name>Adventure Valley Durbuy</name>
+      <description>45 min · Most activities from 110 cm. Belgium's biggest adventure park: 20 tree-climbing courses, 566 m zipline, tubing, via ferrata; indoor laser game/bowling for rain. adventure-valley.be · +32 86 21 28 15</description>
+      <styleUrl>#afield</styleUrl><Point><coordinates>5.4356409,50.3455915,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Restaurants</name>
+    <Placemark><name>L'Atelier (Houffalize)</name>
+      <description>Best food in town — seasonal menus. Small, book ahead. Closed Mon &amp; Thu.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.789469,50.132246,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Rallye (Houffalize)</name>
+      <description>Relaxed, family-friendly — stoofvlees, burgers, veggie options. Open daily.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.790246,50.132381,0</coordinates></Point></Placemark>
+    <Placemark><name>Brasserie Le Montmartre (Houffalize)</name>
+      <description>Casual all-day brasserie by the bridge; good with large groups.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.78999,50.13235,0</coordinates></Point></Placemark>
+    <Placemark><name>La Grande Bleue (Houffalize)</name>
+      <description>Excellent Mediterranean/Moroccan — tajines and couscous.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.789748,50.131813,0</coordinates></Point></Placemark>
+    <Placemark><name>Charme de Wibrin</name>
+      <description>Beloved village bistro, Belgian classics done right. Open Thu–Sun only.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.705098,50.164254,0</coordinates></Point></Placemark>
+    <Placemark><name>Wagon Léo (Bastogne)</name>
+      <description>Bastogne institution — moules-frites and Belgian classics. Closed Mon.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.716256,50.001092,0</coordinates></Point></Placemark>
+    <Placemark><name>Brasserie Lamborelle (Bastogne)</name>
+      <description>Airborne beer served in a helmet cup — WWII history on tap. Closed Mon–Tue.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.715919,50.001952,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Quai Son (La Roche-en-Ardenne)</name>
+      <description>Terrace with castle view; wild boar stew and Belgian beers. Open daily.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.576533,50.180535,0</coordinates></Point></Placemark>
+    <Placemark><name>Signé Jeanne (La Roche-en-Ardenne)</name>
+      <description>Generous Belgian portions, friendly with big groups. Closed Wed–Thu.</description>
+      <styleUrl>#resto</styleUrl><Point><coordinates>5.576728,50.180232,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Friteries &amp; takeaway</name>
+    <Placemark><name>Festi Frites le 52 (Mabompré)</name>
+      <description>2 min — the friterie at our own N847 exit! Wed–Sun 11:30–14:00, 17:30–21:00. First-night dinner.</description>
+      <styleUrl>#frit</styleUrl><Point><coordinates>5.7552427,50.0949706,0</coordinates></Point></Placemark>
+    <Placemark><name>Friterie la Chouffette (Fontenaille)</name>
+      <description>5 min · Wed–Sun 11:30–21:00. Fresh, grease-free fries on the road toward Achouffe.</description>
+      <styleUrl>#frit</styleUrl><Point><coordinates>5.7881877,50.1582831,0</coordinates></Point></Placemark>
+    <Placemark><name>Chez l'Italien (takeaway pizza)</name>
+      <description>5 min · Daily 12:00–13:30, 17:00–21:30. Pizza stack for the villa terrace. Pl. Roi Albert 20A · +32 61 46 46 11</description>
+      <styleUrl>#frit</styleUrl><Point><coordinates>5.7905449,50.1299621,0</coordinates></Point></Placemark>
+    <Placemark><name>Au Chat l'Heureux (Nadrin)</name>
+      <description>15 min · 4.4★ · Closed Tue–Wed. Best friterie around — the Le Hérou pairing. Thu–Mon 11:30–14:00, 17:30–20:30 (21:00 Fri–Sat) · Rue de Houffalize 5</description>
+      <styleUrl>#frit</styleUrl><Point><coordinates>5.6838426,50.1586511,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Bakeries</name>
+    <Placemark><name>Valentine Boulangerie-Pâtisserie (Houffalize)</name>
+      <description>Pl. de l'Eglise 15. Daily 6:30–18:30. Filled pains au chocolat, lemon meringue tart, seating for coffee, ice cream. Easiest daily croissant run. Tel +32 61 32 11 09 — can pre-order for a big group.</description>
+      <styleUrl>#bak</styleUrl><Point><coordinates>5.788742,50.132931,0</coordinates></Point></Placemark>
+    <Placemark><name>Boulangerie Philippart (Houffalize)</name>
+      <description>Place Roi Albert 24. Locals' favorite for bread; try the tarte au sucre. Closed Tue; Sun mornings only. Tel +32 61 28 80 89.</description>
+      <styleUrl>#bak</styleUrl><Point><coordinates>5.790387,50.130131,0</coordinates></Point></Placemark>
+    <Placemark><name>Boulangerie Bultot (near Wibrin)</name>
+      <description>Rue de la Vla Romaine 23. Best baking in the area — sourdough, viennoiserie, chocolates. Go early, sells out. Closed Mon. On the way back from Wibrin/Nisramont. Tel +32 84 44 41 03.</description>
+      <styleUrl>#bak</styleUrl><Point><coordinates>5.680516,50.161748,0</coordinates></Point></Placemark>
+    <Placemark><name>Boulangerie Delhaye (Bastogne)</name>
+      <description>Pl. Général Mc Auliffe 7, main square. Daily 7–18:30. Sandwiches and pastries — handy on your Bastogne museum day.</description>
+      <styleUrl>#bak</styleUrl><Point><coordinates>5.715519,50.001284,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Ice cream</name>
+    <Placemark><name>Le Préai Glacé (Taverneux)</name>
+      <description>5 min. Farm ice cream from vending machines, open 24/7, card/Apple Pay OK. Also farm milk, chocolate milk, eggs. Midnight run approved.</description>
+      <styleUrl>#ice</styleUrl><Point><coordinates>5.795749,50.145182,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Petit Chevalier (La Roche)</name>
+      <description>25 min. Best ice cream in La Roche — try amarena or blueberry. Pair with your La Roche day.</description>
+      <styleUrl>#ice</styleUrl><Point><coordinates>5.575456,50.181519,0</coordinates></Point></Placemark>
+    <Placemark><name>Un P'tit Quelque Chose (Bihain)</name>
+      <description>25 min. Farm glacerie with garden terrace, superb myrtille. Wed/Fri/Sat/Sun afternoons only.</description>
+      <styleUrl>#ice</styleUrl><Point><coordinates>5.808799,50.240278,0</coordinates></Point></Placemark>
+    <Placemark><name>Melba's (Bastogne)</name>
+      <description>20 min. Pastry shop on the main square — ice cream + Belgian waffles on museum day. Closed Mon.</description>
+      <styleUrl>#ice</styleUrl><Point><coordinates>5.714523,50.001215,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Bars</name>
+    <Placemark><name>Les 3 Passerelles (Houffalize)</name>
+      <description>5 min. Local pub, good Belgian beers, open till 11 pm. Closed Mon.</description>
+      <styleUrl>#bar</styleUrl><Point><coordinates>5.789541,50.132164,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Grandcafé (Houffalize)</name>
+      <description>5 min. Big beer list incl. Orval — but closes 18:30, so apéro only. Closed Tue–Wed.</description>
+      <styleUrl>#bar</styleUrl><Point><coordinates>5.790881,50.132637,0</coordinates></Point></Placemark>
+    <Placemark><name>Baraddur (Bastogne)</name>
+      <description>20 min. Board game bar, local beers + charcuterie, till 1–3 am Thu–Sat, Sun afternoon. Bring cash. The night out.</description>
+      <styleUrl>#bar</styleUrl><Point><coordinates>5.716118,49.999533,0</coordinates></Point></Placemark>
+    <Placemark><name>Caliente Lounge Bar (Bastogne)</name>
+      <description>20 min. Cocktails on Rue Lamborelle till 1–2 am. Closed Mon.</description>
+      <styleUrl>#bar</styleUrl><Point><coordinates>5.716102,50.001838,0</coordinates></Point></Placemark>
+    <Placemark><name>Le Flamand Perdu (La Roche)</name>
+      <description>25 min. Tiny 4.9★ beer bar off the square, excellent bottle list, till midnight+. Closed Tue–Wed.</description>
+      <styleUrl>#bar</styleUrl><Point><coordinates>5.574635,50.181514,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Gyms &amp; biking</name>
+    <Placemark><name>Basic-Fit (Bastogne)</name>
+      <description>20 min. Open 24/7, day pass ~€9 from kiosk at entrance. Best drop-in option.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.691286,50.001927,0</coordinates></Point></Placemark>
+    <Placemark><name>CrossFit Mind Steel (Bastogne)</name>
+      <description>20 min, next to Basic-Fit. 5.0★ box — message ahead for a drop-in class.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.691524,50.001905,0</coordinates></Point></Placemark>
+    <Placemark><name>Vayamundo Fitness (Houffalize)</name>
+      <description>5 min. Closest gym but inside the Vayamundo resort — may be guests-only, call +32 496 72 07 17 first.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.796997,50.131981,0</coordinates></Point></Placemark>
+    <Placemark><name>Houffa Bike (Houffalize)</name>
+      <description>5 min. MTB/e-MTB rental, enough bikes for big groups, guides available. UCI World Cup trails + a lovely 28 km loop start from town. Daily 9–18.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.79196,50.13052,0</coordinates></Point></Placemark>
+    <Placemark><name>Côte de Saint-Roch (Houffalize)</name>
+      <description>5 min. The famous Liège–Bastogne–Liège wall climbing out of town — road cyclists' rite of passage.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.789,50.1315,0</coordinates></Point></Placemark>
+    <Placemark><name>Vennbahn rail-trail (Troisvierges start)</name>
+      <description>~25 min. Long, flat railway cycle path — easy ride for mixed abilities and e-bikes.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>6.0031,50.1219,0</coordinates></Point></Placemark>
+    <Placemark><name>So Watt e-bike rental (La Roche)</name>
+      <description>25 min. Near-new e-MTBs with mapped routes; multiple sizes. Closed Mon.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.606937,50.180772,0</coordinates></Point></Placemark>
+    <Placemark><name>Trott-e-Trail (La Roche)</name>
+      <description>25 min. Guided off-road electric scooter tours — handles groups of 20+. Great group activity.</description>
+      <styleUrl>#gym</styleUrl><Point><coordinates>5.579864,50.176533,0</coordinates></Point></Placemark>
+  </Folder>
+  <Folder>
+    <name>Shops &amp; practical</name>
+    <Placemark><name>Spar (Houffalize)</name>
+      <description>5 min. Mon–Fri 9–12:30 &amp; 13:30–18:30 (closed for lunch!), Sat 9–18:30, Sun 9–12:30. Closed Sat 15 Aug (holiday) — arrival shop Fri 14th! Rue de Liège 9 · +32 61 28 83 93</description>
+      <styleUrl>#prac</styleUrl><Point><coordinates>5.7904205,50.1330440,0</coordinates></Point></Placemark>
+    <Placemark><name>Proxy Delhaize (Houffalize)</name>
+      <description>5 min · Pl. Roi Albert 23 · +32 61 28 90 17. Backup when Spar is on lunch break.</description>
+      <styleUrl>#prac</styleUrl><Point><coordinates>5.7901602,50.1297625,0</coordinates></Point></Placemark>
+    <Placemark><name>Boucherie Chez Antoine</name>
+      <description>5 min · Closed Mon. BBQ packs + real Jambon d'Houffalize; free delivery to holiday homes within 15 km. Tue–Fri 8:30–12:30 &amp; 13:30–18:30, Sat 8:30–18:30, Sun 8–12 · Rue du Pont 7 · +32 61 28 80 75</description>
+      <styleUrl>#prac</styleUrl><Point><coordinates>5.7901003,50.1323763,0</coordinates></Point></Placemark>
+    <Placemark><name>Pharmacie Gilson</name>
+      <description>5 min. Mon–Fri 9:00–12:30 &amp; 13:30–19:00, Sat morning. Duty pharmacy nights/weekends: pharmacie.be · Rue de Liège 3 · +32 61 28 80 24</description>
+      <styleUrl>#prac</styleUrl><Point><coordinates>5.7905970,50.1327289,0</coordinates></Point></Placemark>
+    <Placemark><name>ER 24/7 — Hôpital Sainte-Thérèse (Bastogne)</name>
+      <description>20 min straight down our road. Chaussée d'Houffalize 1, Bastogne. Emergencies: 112 · out-of-hours doctor: 1733 · poison line: 070 245 245</description>
+      <styleUrl>#prac</styleUrl><Point><coordinates>5.7234344,50.0124427,0</coordinates></Point></Placemark>
+    <Placemark><name>Bastogne market (Rue des Récollets)</name>
+      <description>20 min. ~100 stalls, alternate Saturdays 7:00–13:00 — Sat 15 Aug is a holiday, check bastogne.be for August dates.</description>
+      <styleUrl>#prac</styleUrl><Point><coordinates>5.7206006,50.0017674,0</coordinates></Point></Placemark>
+  </Folder>
+</Document>
+</kml>
